@@ -1,0 +1,270 @@
+/*TIPOGRAFÍA Y AJUSTES GENERALES DE LAS PÁGINAS*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 100%; 
+}
+body {
+    font-family: "Arvo", Georgia, serif;
+    background-image: url('../imagenes/fondo.png'); /* Mantené la ruta que te funcionó */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+background-size: auto; /* Mantiene el tamaño original de la imagen sin estirarla */
+    background-repeat: repeat; /* Si es un patrón, se repite de fondo como un mosaico prolijo */
+    
+    color: #1a1a1a;
+    line-height: 1.6;
+    padding: 2rem 1rem;
+}
+
+.contenedor-global {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.92); 
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ENCABEZADOS TITULOS Y NAVEGACIÓN */
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #333;
+    padding-bottom: 1rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #111;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #555;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #222;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+    color: #333;
+}
+
+/* Menú de navegación con Flexbox */
+nav {
+    margin-bottom: 2.5rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: #444;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover, nav a.activo {
+    background-color: #222;
+    color: #fff;
+}
+
+/* LAYOUTS CON FLEXBOX  */
+/* PÁGINA 1: Layout de 3 columnas del mismo ancho */
+.layout-tres-columnas {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.layout-tres-columnas .columna {
+    flex: 1; /* Esto hace que todas las columnas midan exactamente lo mismo */
+    background-color: rgba(0, 0, 0, 0.03);
+    padding: 1.5rem;
+    border-radius: 6px;
+    border-left: 4px solid #222;
+}
+
+/* PÁGINA 2: Layout de 2 columnas asimétricas (Distinto ancho) */
+.layout-dos-columnas {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.layout-dos-columnas .columna-principal {
+    flex: 2; /* Ocupa 2 partes del espacio (aproximadamente 66%) */
+}
+
+.layout-dos-columnas .columna-secundaria {
+    flex: 1; /* Ocupa 1 parte del espacio (aproximadamente 33%) */
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 6px;
+    height: fit-content;
+}
+
+.layout-dos-columnas .columna-secundaria ul {
+    padding-left: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+/* Responsividad básica para pantallas chicas */
+@media (max-width: 768px) {
+    .layout-tres-columnas, .layout-dos-columnas {
+        flex-direction: column; /* Se vuelven una sola columna en celulares */
+    }
+}
+
+/* BOTONES Y FORMULARIOS */
+button {
+    font-family: "Arvo", serif;
+    background-color: #222;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    margin: 1rem 0;
+}
+
+button:hover:not(:disabled) {
+    background-color: #444;
+}
+
+button:disabled {
+    background-color: #ccc;
+    color: #777;
+    cursor: not-allowed;
+}
+
+/* Estilos de los formularios de Gestión */
+.seccion-formulario {
+    background-color: #fff;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    max-width: 500px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+input {
+    font-family: "Arvo", serif;
+    padding: 0.6rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input:disabled {
+    background-color: #f2f2f2;
+    color: #888;
+}
+
+/* Resultados y utilidades */
+#seccion-calculos {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 2px dashed #ccc;
+}
+
+#contenedor-resultados {
+    background-color: #eef7ed;
+    border-left: 5px solid #4caf50;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+}
+
+#contenedor-resultados ul {
+    list-style: none;
+    margin-top: 0.5rem;
+}
+
+#contenedor-resultados li {
+    margin-bottom: 0.5rem;
+}
+
+.oculto {
+    display: none !important;
+}
+
+/* GALERÍA DINÁMICA (Estructura inicial) */
+#contenedor-galeria {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+/* Dos variantes de diseño para el botón de cambio de vista */
+.diseno-grilla {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.diseno-lista {
+    flex-direction: column;
+}
+
+.tarjeta-obra {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 6px;
+    width: calc(33.333% - 1rem); /* 3 por fila en grilla */
+    min-width: 250px;
+}
+
+.diseno-lista .tarjeta-obra {
+    width: 100%; /* 1 por fila en lista */
+}
+
+/* FOOTER */
+footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+footer a {
+    color: #222;
+}

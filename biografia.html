@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casey Reas - Trayectoria y Obras</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div class="contenedor-global">
+
+        <header>
+            <h1>Casey Reas</h1>
+            <p>Código, sistemas y arte generativo contemporáneo</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="biografia.html" class="activo">Biografía u Obras</a></li>
+                <li><a href="gestion.html">Gestión de Estudio</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <!-- Layout de 2 columnas asimétricas -->
+            <div class="layout-dos-columnas">
+                
+                <!-- Columna Izquierda (Más ancha): Biografía -->
+                <article class="columna-principal">
+                    <h2>Trayectoria y Contribuciones</h2>
+                    <p>Nacido en Estados Unidos, Casey Reas desarrolló su formación en diseño y medios digitales, consolidando una carrera que combina investigación, producción artística y docencia. Es reconocido internacionalmente por su trabajo fundacional en el arte generativo y la programación creativa.</p>
+                    
+                    <h3>El rol del artista-programador</h3>
+                    <p>En la práctica de Reas, el artista asume el rol de programador. En lugar de intervenir directamente sobre la imagen final, diseña el conjunto de instrucciones que darán lugar a una obra única, iterativa y generativa.</p>
+                </article>
+
+                <!-- Columna Derecha (Más angosta): Conceptos clave -->
+                <aside class="columna-secundaria">
+                    <h3>Conceptos Clave</h3>
+                    <ul>
+                        <li>Software Structures</li>
+                        <li>Process</li>
+                        <li>Generative Systems</li>
+                        <li>Emergencia</li>
+                        <li>Arte basado en reglas</li>
+                    </ul>
+                </aside>
+
+            </div>
+
+            <hr>
+
+            <!-- Sección de la Galería Dinámica -->
+            <section id="galeria-obras">
+                <h2>Galería de Obras</h2>
+                <p>Hacé clic en el botón para cambiar el diseño visual de la galería.</p>
+                <button id="btn-cambiar-diseno">Cambiar Vista de Galería</button>
+                
+                <!-- Contenedor donde JS inyectará las obras -->
+                <div id="contenedor-galeria" class="diseno-grilla">
+                    <!-- Las 5 obras se generarán dinámicamente -->
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Contacto: <a href="mailto:casey@artedigital.com">casey@artedigital.com</a></p>
+            <p>&copy; 2026 - Informática General - Artes Multimediales - UNA</p>
+        </footer>
+
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

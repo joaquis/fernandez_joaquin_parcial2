@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casey Reas - Inicio</title>
+    <!-- Tipografía Google Fonts: Arvo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <!-- Contenedor principal para centrar con Flexbox -->
+    <div class="contenedor-global">
+
+        <header>
+            <h1>Casey Reas</h1>
+            <p>Código, sistemas y arte generativo contemporáneo</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html" class="activo">Inicio</a></li>
+                <li><a href="biografia.html">Biografía u Obras</a></li>
+                <li><a href="gestion.html">Gestión de Estudio</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <!-- Sección del dato curioso al azar solicitado -->
+            <section id="seccion-curiosidad">
+                <h2>¿Sabías que...?</h2>
+                <div id="contenedor-dato">
+                    <!-- Aquí se cargará el dato curioso con JS -->
+                    <p>Cargando dato curioso...</p>
+                </div>
+                <button id="btn-dato">Ver otro dato curioso</button>
+            </section>
+
+            <!-- Layout de 3 columnas del mismo ancho -->
+            <div class="layout-tres-columnas">
+                <section class="columna">
+                    <h2>Arte Generativo</h2>
+                    <p>Casey Reas es un artista, programador y educador reconocido por su trabajo en el desarrollo del arte generativo. Su práctica se basa en la creación de sistemas que, a partir de reglas simples, producen resultados complejos y continuamente variables.</p>
+                </section>
+                
+                <section class="columna">
+                    <h2>El Código como Sistema</h2>
+                    <p>Su trabajo se centra en la relación entre instrucciones, ejecución y resultado. A través del uso del código, construye estructuras que permiten explorar variaciones infinitas de una misma idea artística.</p>
+                </section>
+
+                <section class="columna">
+                    <h2>Pensamiento Computacional</h2>
+                    <p>Además de su producción artística, ha tenido un rol clave en la difusión del pensamiento computacional dentro del arte contemporáneo, promoviendo la comprensión del código como lenguaje creativo.</p>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <p>Contacto: <a href="mailto:casey@artedigital.com">casey@artedigital.com</a></p>
+            <p>&copy; 2026 - Informática General - Artes Multimediales - UNA</p>
+        </footer>
+
+    </div>
+
+    <!-- Scripts de la página -->
+  <script src="js/main.js" defer></script>
+</body>
+</html>
