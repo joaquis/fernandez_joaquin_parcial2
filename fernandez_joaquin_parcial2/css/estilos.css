@@ -8,18 +8,19 @@
 html {
     font-size: 100%; 
 }
-
 body {
     font-family: "Arvo", Georgia, serif;
-    background-image: url('imagenes/fondo.png'); 
+    background-image: url('../imagenes/fondo.png'); /* Mantené la ruta que te funcionó */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+background-size: auto; /* Mantiene el tamaño original de la imagen sin estirarla */
+    background-repeat: repeat; /* Si es un patrón, se repite de fondo como un mosaico prolijo */
+    
     color: #1a1a1a;
     line-height: 1.6;
     padding: 2rem 1rem;
 }
-
 
 .contenedor-global {
     max-width: 1200px;
