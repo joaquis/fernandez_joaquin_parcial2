@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casey Reas - Gestión de Instalaciones</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div class="contenedor-global">
+
+        <header>
+            <h1>Casey Reas</h1>
+            <p>Código, sistemas y arte generativo contemporáneo</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="biografia.html">Biografía u Obras</a></li>
+                <li><a href="gestion.html" class="activo">Gestión de Estudio</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section>
+                <h2>Sistema de Gestión de Instalaciones Interactivas</h2>
+                <p class="instrucciones">Instrucciones: Primero, ingrese los parámetros generales del estudio (horas de trabajo y valor del honorario). Luego determine cuántas instalaciones va a producir y cargue los datos de cada una de ellas utilizando los formularios habilitados secuencialmente.</p>
+            </section>
+
+            <!-- Formulario 1: Configuración Inicial del Estudio -->
+            <section class="seccion-formulario">
+                <h3>1. Configuración de Costos del Estudio</h3>
+                <form id="form-inicial">
+                    <label for="horas-dia">Horas de trabajo por día:</label>
+                    <input type="number" id="horas-dia" min="1" max="24" required>
+
+                    <label for="valor-honorario">Valor del honorario por hora ($):</label>
+                    <input type="number" id="valor-honorario" min="1" required>
+
+                    <label for="cant-instalaciones">Cantidad de instalaciones a producir:</label>
+                    <input type="number" id="cant-instalaciones" min="1" required>
+
+                    <button type="submit" id="btn-guardar-inicial">Fijar Parámetros</button>
+                </form>
+            </section>
+
+            <!-- Formulario 2: Carga de Instalaciones (Inicialmente deshabilitado) -->
+            <section class="seccion-formulario">
+                <h3>2. Registro de Instalación (<span id="contador-carga">0</span> de <span id="total-carga">0</span>)</h3>
+                <form id="form-instalacion">
+                    <label for="nombre-inst">Nombre de la instalación:</label>
+                    <input type="text" id="nombre-inst" required disabled>
+
+                    <label for="cant-personas">Cantidad de personas necesarias:</label>
+                    <input type="number" id="cant-personas" min="1" required disabled>
+
+                    <label for="dias-produccion">Días estimados de producción:</label>
+                    <input type="number" id="dias-produccion" min="1" required disabled>
+
+                    <button type="submit" id="btn-cargar-inst" disabled>Cargar Instalación</button>
+                </form>
+            </section>
+
+            <!-- Sección de Acciones y Resultados (Inicialmente deshabilitados) -->
+            <section id="seccion-calculos">
+                <h3>3. Cálculos y Resultados</h3>
+                <button id="btn-calcular" disabled>Calcular Resultados</button>
+
+                <div id="contenedor-resultados" class="oculto">
+                    <h4>Resultados del Análisis:</h4>
+                    <ul>
+                        <li><strong>Costo total de un día de trabajo en el estudio:</strong> <span id="res-costo-dia">$0</span></li>
+                        <li><strong>Instalación con más días de producción:</strong> <span id="res-inst-max">Ninguna</span> (Costo total de esta obra: <span id="res-costo-max">$0</span>)</li>
+                        <li><strong>Porcentaje sobre el costo total del estudio:</strong> <span id="res-porcentaje">0%</span></li>
+                    </ul>
+                </div>
+
+                <button id="btn-reiniciar" disabled>Reiniciar Sistema</button>
+            </section>
+        </main>
+
+        <footer>
+            <p>Contacto: <a href="mailto:casey@artedigital.com">casey@artedigital.com</a></p>
+            <p>&copy; 2026 - Informática General - Artes Multimediales - UNA</p>
+        </footer>
+
+    </div>
+
+    <!-- Script específico para la lógica del ejercicio -->
+    <script src="js/gestion.js"></script>
+</body>
+</html>
