@@ -10,7 +10,7 @@ html {
 }
 body {
     font-family: "Arvo", Georgia, serif;
-    background-image: url('../imagenes/fondo.png'); /* Mantené la ruta que te funcionó */
+    background-image: url('/imagenes/fondo.png'); /* Mantené la ruta que te funcionó */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
